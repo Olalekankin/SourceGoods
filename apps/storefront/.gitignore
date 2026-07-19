@@ -1,0 +1,13 @@
+# Next.js build output
+.next/
+out/
+build/
+
+# production
+/build
+
+# env files
+.env*.local
+
+# Vercel
+.vercel

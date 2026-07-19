@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Search, ShoppingCart, User, Menu, X, Package } from 'lucide-react';
-import { useGetMe, useGetCart } from '@workspace/api-client-react';
+import { useGetMe, useGetCart, getGetMeQueryKey } from '@workspace/api-client-react';
 import Logo from './Logo';
 
 export default function Navbar() {
@@ -13,6 +13,7 @@ export default function Navbar() {
   const hasToken = typeof window !== 'undefined' && !!localStorage.getItem('sg_token');
   const { data: user } = useGetMe({
     query: {
+      queryKey: getGetMeQueryKey(),
       enabled: hasToken,
       retry: false,
       refetchOnWindowFocus: false,
