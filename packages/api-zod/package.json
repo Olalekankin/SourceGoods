@@ -1,0 +1,27 @@
+{
+  "name": "@workspace/api-zod",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./*": {
+      "import": "./dist/*",
+      "require": "./dist/*",
+      "types": "./dist/*"
+    }
+  },
+  "dependencies": {
+    "zod": "catalog:"
+  }
+  ,
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  }
+}

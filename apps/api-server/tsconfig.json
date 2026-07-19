@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "declaration": false,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2021",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "rootDir": ".",
+    "baseUrl": "./",
+    "paths": {
+      "@workspace/db": ["../../packages/db/dist/index.d.ts"],
+      "@workspace/db/*": ["../../packages/db/dist/*"],
+      "@workspace/api-zod": ["../../packages/api-zod/dist/index.d.ts"],
+      "@workspace/api-zod/*": ["../../packages/api-zod/dist/*"]
+    },
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitThis": false,
+    "alwaysStrict": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true
+  }
+}
